@@ -63,7 +63,7 @@
                                 <TextBlock Grid.Row="4" Grid.Column="0">Distance X:</TextBlock>
                                 <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Car.VirtualFunctionBus.DummyPacket.DistanceX}"/>
                                 <TextBlock Grid.Row="5" Grid.Column="0">Distance Y:</TextBlock>
-                                <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding DummyPacket.DistanceY}"/>
+                                <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding Car.VirtualFunctionBus.DummyPacket.DistanceY}"/>
                             </Grid>
                         </StackPanel>
                     </DataTemplate>
