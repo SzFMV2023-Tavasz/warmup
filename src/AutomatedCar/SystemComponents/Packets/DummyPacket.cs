@@ -4,7 +4,7 @@ namespace AutomatedCar.SystemComponents.Packets
 
     public class DummyPacket : ReactiveObject, IReadOnlyDummyPacket
     {
-        private int distanceX;
+        private int distanceX; 
         private int distanceY;
 
         public int DistanceX
