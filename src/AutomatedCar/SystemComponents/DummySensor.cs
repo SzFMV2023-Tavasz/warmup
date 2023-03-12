@@ -10,7 +10,7 @@
 
     public class DummySensor : SystemComponent
     {
-        DummyPacket dummyPacket;
+        private DummyPacket dummyPacket;
         public DummySensor(VirtualFunctionBus virtualFunctionBus) : base(virtualFunctionBus)
         {
             this.dummyPacket = new DummyPacket();
