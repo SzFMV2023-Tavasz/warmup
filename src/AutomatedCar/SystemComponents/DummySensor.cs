@@ -23,7 +23,7 @@
         {
             this.dummyPacket = new DummyPacket();
             vbf.DummyPacket = this.dummyPacket;
-            var circle = World.Instance.WorldObjects.Where(x => nameof(x) == nameof(Circle)).FirstOrDefault();
+            var circle = World.Instance.WorldObjects.Where(x => x is Circle).FirstOrDefault();
 
             this.circlePosX = circle.X;
             this.circlePosY = circle.Y;
