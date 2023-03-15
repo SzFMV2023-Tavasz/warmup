@@ -13,7 +13,6 @@
             dummyPacket = new DummyPacket();
             GetCircle();
             virtualFunctionBus.DummyPacket = this.dummyPacket;
-            virtualFunctionBus.RegisterComponent(this);
         }
         int circle_x;
         int circle_y;
