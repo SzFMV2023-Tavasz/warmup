@@ -5,8 +5,12 @@ namespace AutomatedCar.SystemComponents
 
     public class VirtualFunctionBus : GameBase
     {
-        private List<SystemComponent> components = new List<SystemComponent>();
+        public VirtualFunctionBus()
+        {
+            DummyPacket = new DummyPacket();
+        }
 
+        private List<SystemComponent> components = new List<SystemComponent>();
         public IReadOnlyDummyPacket DummyPacket { get; set; }
 
         public void RegisterComponent(SystemComponent component)
