@@ -99,7 +99,7 @@
             (List<double> x, List<double> y) points = new ();
             points.x = new List<double>();
             points.y = new List<double>();
-            var rotationPoint = new Avalonia.Point(worldObject.RotationPoint.X, worldObject.RotationPoint.Y);
+            Point rotationPoint = new Avalonia.Point(worldObject.RotationPoint.X, worldObject.RotationPoint.Y);
 
             foreach (var geometry in worldObject.Geometries)
             {
@@ -116,8 +116,6 @@
         }
 
         private static double GetEuclidianDistance(Point point, Point rotationPoint) => Math.Sqrt(Math.Pow(point.X - rotationPoint.X, 2) + Math.Pow(point.Y - rotationPoint.Y, 2));
-
-        private static double ConvertRotation(double rotation) => -rotation + 90;
 
         private static double Deg2Rad(double degree) => (Math.PI / 180) * degree;
 
