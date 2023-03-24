@@ -35,13 +35,13 @@
             var circle = (Circle)World.Instance.WorldObjects.Where(worldObject => worldObject is Circle).First();
             var car = World.Instance.ControlledCar;
 
-            (int distanceX, int distanceY) = GetDistances2(car, circle);
+            (int distanceX, int distanceY) = GetDistances(car, circle);
 
             this.dummyPacket.DistanceX = distanceX;
             this.dummyPacket.DistanceY = distanceY;
         }
 
-        private static (int distanceX, int distanceY) GetDistances2(AutomatedCar car, Circle circle)
+        private static (int distanceX, int distanceY) GetDistances(AutomatedCar car, Circle circle)
         {
             var carPointsRotated = RotatePoints(car);
             var circlePointsRotated = RotatePoints(circle);
