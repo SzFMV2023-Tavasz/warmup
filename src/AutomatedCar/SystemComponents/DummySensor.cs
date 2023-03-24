@@ -41,33 +41,6 @@
             this.dummyPacket.DistanceY = distanceY;
         }
 
-        private static (int distanceX, int distanceY) GetDistances1(AutomatedCar car, Circle circle)
-        {
-            int carLeft = car.X - (int)car.Geometry.Bounds.Center.X + (int)car.Geometry.Bounds.Left;
-            int carRight = car.X - (int)car.Geometry.Bounds.Center.X + (int)car.Geometry.Bounds.Right;
-            int circleLeft = circle.X - circle.Radius;
-            int circleRight = circle.X + circle.Radius;
-
-            int carTop = car.Y - (int)car.Geometry.Bounds.Center.Y + (int)car.Geometry.Bounds.Top;
-            int carBottom = car.Y - (int)car.Geometry.Bounds.Center.Y + (int)car.Geometry.Bounds.Bottom;
-            int circleTop = circle.Y;
-            int circleBottom = circle.Y + (2 * circle.Radius);
-
-            int distanceX = 0;
-            if (!(carLeft <= circleRight && circleLeft <= carRight))
-            {
-                distanceX = (carLeft > circleRight) ? carLeft - circleRight : circleLeft - carRight;
-            }
-
-            int distanceY = 0;
-            if (!(carTop <= circleBottom && circleTop <= carBottom))
-            {
-                distanceY = (circleBottom < carTop) ? carTop - circleBottom : circleTop - carBottom;
-            }
-
-            return (distanceX, distanceY);
-        }
-
         private static (int distanceX, int distanceY) GetDistances2(AutomatedCar car, Circle circle)
         {
             var carPointsRotated = RotatePoints(car);
