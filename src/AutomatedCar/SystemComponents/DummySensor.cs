@@ -82,7 +82,7 @@
                 }
             }
 
-            return ((int)distanceX, (int)distanceY);
+            return ((int)Math.Round(distanceX), (int)Math.Round(distanceY));
         }
 
         /// <summary>
